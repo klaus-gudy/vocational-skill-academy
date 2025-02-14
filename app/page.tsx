@@ -1,4 +1,5 @@
 import Header from "@/components/shared/header";
+import HeroPreview from "@/components/shared/hero-preview";
 import { Button } from "@/components/ui/button";
 
 export default function Home() {
@@ -30,9 +31,8 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="lg:block md:hidden"></div>
+          <div className="lg:block md:hidden"><HeroPreview /></div>
         </div>
-        <div className="lg:block md:hidden"></div>
       </main>
     </div>
   );
