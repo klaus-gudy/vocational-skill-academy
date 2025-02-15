@@ -58,9 +58,9 @@ export default function   CourseExplorer() {
 
   return (
     <div className="min-h-screen bg-[#e2def4]">
-      <div className="bg-gradient-to-br from-[#0f1116] via-[#151934] to-[#1a1245] text-center mb-8 px-4 py-8">
-        <h1 className="text-4xl font-bold text-white mb-4">Explore Our Courses</h1>
-        <p className="text-gray-400 max-w-2xl mx-auto">
+      <div className="bg-gradient-to-br from-[#0f1116] via-[#151934] to-[#1a1245] mb-8 px-4 py-8">
+        <h1 className="text-3xl font-bold text-white mb-2">Explore Our Courses</h1>
+        <p className="text-gray-400">
           Discover high-quality courses designed to help you master practical skills and advance your career
         </p>
       </div>
