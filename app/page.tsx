@@ -1,12 +1,14 @@
 import Header from "@/components/shared/header";
 import HeroPreview from "@/components/shared/hero-preview";
+import RolePreview from "@/components/shared/role-preview";
 import { Button } from "@/components/ui/button";
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-[#0f1116] via-[#151934] to-[#1a1245]">
       <Header />
-      <main className="container mx-auto px-4 pt-20 lg:pt-32">
+      <main>
+        <section className="container mx-auto px-4 py-20 lg:py-24">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="space-y-8">
             <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight">
@@ -31,8 +33,10 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="lg:block md:hidden"><HeroPreview /></div>
+          <div className="lg:block"><HeroPreview /></div>
         </div>
+        </section>
+        <RolePreview />
       </main>
     </div>
   );

@@ -1,10 +1,25 @@
+"use client"
+
+import type React from "react"
+import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button";
 import { GraduationCap } from "lucide-react";
 import Link from "next/link";
 
 const Header = () => {
+  const [isScrolled, setIsScrolled] = useState(false)
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10)
+    }
+    window.addEventListener("scroll", handleScroll)
+    return () => window.removeEventListener("scroll", handleScroll)
+  }, [])
   return (
-    <header className="fixed w-full bg-transparent backdrop-blur-sm z-50">
+    <header className={`fixed w-full z-50 transition-all duration-300 ${
+      isScrolled ? "bg-[#0c0d15]/90 backdrop-blur-sm shadow-lg" : "bg-transparent"
+    }`}>
       <div className="container mx-auto px-4 py-4 flex items-center justify-between">
         <div className="flex items-center gap-2">
           <GraduationCap className="h-8 w-8 text-gray-300" />
