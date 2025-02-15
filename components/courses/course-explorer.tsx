@@ -43,7 +43,7 @@ const courses = [
 
 const categories = ["All Categories", "Coding", "Agriculture", "Tailoring"]
 
-export default function CourseExplorer() {
+export default function   CourseExplorer() {
   const [searchQuery, setSearchQuery] = useState("")
   const [selectedCategory, setSelectedCategory] = useState("All Categories")
   const [priceRange, setPriceRange] = useState([0, 100000])
@@ -57,7 +57,7 @@ export default function CourseExplorer() {
   })
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen bg-[#e2def4]">
       <div className="bg-gradient-to-br from-[#0f1116] via-[#151934] to-[#1a1245] text-center mb-8 px-4 py-8">
         <h1 className="text-4xl font-bold text-white mb-4">Explore Our Courses</h1>
         <p className="text-gray-400 max-w-2xl mx-auto">
@@ -73,7 +73,7 @@ export default function CourseExplorer() {
               placeholder="Search courses..."
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              className=" w-1/3"
+              className=" w-1/3 bg-white"
             />
           </div>
 
