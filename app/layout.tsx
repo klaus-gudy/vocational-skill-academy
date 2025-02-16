@@ -1,18 +1,6 @@
 import type { Metadata } from "next";
-import { Montserrat, Poppins } from "next/font/google";
+import { montserrat } from "./fonts/fonts";
 import "./globals.css";
-
-export const montserrat = Montserrat({
-  subsets: ["latin"],
-  display: "swap",
-  adjustFontFallback: false,
-});
-export const poppins = Poppins({
-  subsets: ["latin"],
-  weight: ["600", "700"],
-  variable: "--font-heading",
-  display: "swap",
-});
 
 export const metadata: Metadata = {
   title: "Vocational Skills Academy",
@@ -26,7 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${montserrat.className} ${poppins.variable}`}>
+      <body className={`${montserrat.className}`}>
       {children}
       </body>
     </html>
