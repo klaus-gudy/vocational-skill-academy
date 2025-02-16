@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Edit2, Trash2, Users, Clock, Star } from "lucide-react";
+import { Edit2, Trash2, Users, Clock } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import {
   Card,

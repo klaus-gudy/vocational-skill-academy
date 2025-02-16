@@ -41,12 +41,12 @@ const courses = [
   },
 ]
 
-const categories = ["All Categories", "Coding", "Agriculture", "Tailoring"]
+// const categories = ["All Categories", "Coding", "Agriculture", "Tailoring"]
 
 export default function   CourseExplorer() {
   const [searchQuery, setSearchQuery] = useState("")
-  const [selectedCategory, setSelectedCategory] = useState("All Categories")
-  const [priceRange, setPriceRange] = useState([0, 100000])
+  const [selectedCategory] = useState("All Categories")
+  const [priceRange] = useState([0, 100000])
 
   const filteredCourses = courses.filter((course) => {
     const matchesSearch = course.title.toLowerCase().includes(searchQuery.toLowerCase())

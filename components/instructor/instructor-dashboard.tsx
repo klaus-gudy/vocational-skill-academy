@@ -54,7 +54,7 @@ const sampleCourses: Course[] = [
 ];
 
 export default function InstructorDashboard() {
-  const [courses, setCourses] = useState<Course[]>(sampleCourses);
+  const [courses] = useState<Course[]>(sampleCourses);
   return (
     <div className="min-h-screen bg-[#e2def4]">
       <div className="flex justify-between items-center bg-gradient-to-br from-[#0f1116] via-[#151934] to-[#1a1245]  mb-8 px-4 py-8">

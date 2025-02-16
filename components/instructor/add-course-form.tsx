@@ -11,7 +11,6 @@ import {
 import {
   Dialog,
   DialogContent,
-  DialogFooter,
   DialogHeader,
   DialogTitle,
   DialogTrigger,
@@ -26,7 +25,7 @@ import {
 } from "@/components/ui/form";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
-import { ChevronLeft, ChevronRight, CircleHelp, Loader2, Plus } from "lucide-react";
+import { ChevronLeft, ChevronRight, Loader2, Plus } from "lucide-react";
 import { Textarea } from "@/components/ui/textarea";
 import { useState } from "react";
 
@@ -67,15 +66,9 @@ const steps = [
   },
 ];
 
-interface CourseFormProps {
-  initialData?: CourseFormData;
-  onSubmit: (data: CourseFormData) => void;
-  onCancel: () => void;
-}
-
 export function AddCourseForm() {
   const [currentStep, setCurrentStep] = useState(0);
-  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitting] = useState(false);
 
   const form = useForm<CourseFormData>({
     resolver: zodResolver(courseSchema),

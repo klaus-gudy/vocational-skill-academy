@@ -1,4 +1,4 @@
-import { GraduationCap, PencilIcon, BookOpenIcon, DatabaseIcon, GlobeIcon, BarChartIcon } from "lucide-react"
+import { GraduationCap, PencilIcon, BookOpenIcon } from "lucide-react"
 
 const features = [
   {

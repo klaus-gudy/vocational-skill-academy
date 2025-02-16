@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Montserrat, Poppins } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "@/components/shared/theme-provider";
 
 export const montserrat = Montserrat({
   subsets: ["latin"],

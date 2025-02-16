@@ -6,7 +6,7 @@ import {
   CardFooter,
   CardHeader,
 } from "@/components/ui/card";
-import { Clock, Star, Users } from "lucide-react";
+import { Clock, Users } from "lucide-react";
 import placeholder from "@/public/placeholder.png";
 
 interface CourseCardProps {

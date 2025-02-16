@@ -7,8 +7,6 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion";
-import Image from "next/image";
-import placeholder from "@/public/placeholder.png";
 import {
   Clock,
   Users,
@@ -59,12 +57,8 @@ const courses = [
   },
 ];
 
-export default function CourseDetailsPage({
-  params,
-}: {
-  params: { id: string };
-}) {
-  const course = courses.find((c) => c.id === parseInt(params.id));
+export default function CourseDetailsPage() {
+  const course = courses[0];
   return (
     <main className="min-h-screen bg-gradient-to-br bg-[#e2def4] py-4">
       <div className="container mx-auto px-6">
@@ -87,7 +81,7 @@ export default function CourseDetailsPage({
 
             <div>
               <h2 className="text-xl font-semibold text-black/80 mb-4">
-                What You'll Learn
+                What You&apos;ll Learn
               </h2>
               <div className="grid gap-3 sm:grid-cols-2">
                 {course?.objectives.map((objective, index) => (
