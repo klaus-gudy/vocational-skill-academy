@@ -68,10 +68,10 @@ export default function InstructorCourseCard({
           {course.price} TZS
         </span>
         <div className="flex gap-2">
-          <Button size="sm" variant="outline" onClick={() => toast.info("No editing functionality yet")}>
+          <Button size="sm" variant="outline" onClick={() => toast.info("Server down. Please try again later")}>
             <Edit2 className="w-4 h-4" />
           </Button>
-          <Button size="sm" variant="destructive" onClick={() => toast.info("No deleting functionality yet")}>
+          <Button size="sm" variant="destructive" onClick={() => toast.info("Server down. Please try again later")}>
             <Trash2 className="w-4 h-4" />
           </Button>
         </div>

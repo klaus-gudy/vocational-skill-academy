@@ -65,7 +65,7 @@ export default function InstructorDashboard() {
             Manage your courses and create new ones
           </p>
         </div>
-        <Button className="bg-purple-600 hover:bg-purple-700" onClick={() => toast.info("Adding new course under construction")}>
+        <Button className="bg-purple-600 hover:bg-purple-700" onClick={() => toast.info("Server down. Please try again later")}>
           <Plus className="w-4 h-4 mr-2" />
           Add New Course
         </Button>

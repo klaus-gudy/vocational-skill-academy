@@ -35,20 +35,20 @@ export default function RolePreview() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {features.map((feature, index) => (
-            <Link href={feature.href}>
             <div
               key={index}
               className="hover-card p-6 rounded-lg bg-[#12152b] border border-gray-800 hover:border-purple-500/50 transition-all duration-300 group"
             >
-              <div className="h-14 w-14 bg-gradient-to-r from-purple-400 to-purple-600 rounded-xl flex items-center justify-center mb-6">
-                <feature.icon className="h-7 w-7 text-white" />
-              </div>
-              <h3 className="text-xl font-semibold text-white mb-2">
-                {feature.title}
-              </h3>
-              <p className="text-gray-400">{feature.description}</p>
+              <Link href={feature.href}>
+                <div className="h-14 w-14 bg-gradient-to-r from-purple-400 to-purple-600 rounded-xl flex items-center justify-center mb-6">
+                  <feature.icon className="h-7 w-7 text-white" />
+                </div>
+                <h3 className="text-xl font-semibold text-white mb-2">
+                  {feature.title}
+                </h3>
+                <p className="text-gray-400">{feature.description}</p>
+              </Link>
             </div>
-            </Link>
           ))}
         </div>
       </div>

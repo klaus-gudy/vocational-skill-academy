@@ -5,7 +5,6 @@ import { useState, useEffect } from "react"
 import { Button } from "@/components/ui/button";
 import { GraduationCap } from "lucide-react";
 import Link from "next/link";
-import { toast } from "sonner";
 
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false)
@@ -32,9 +31,16 @@ const Header = () => {
           <Link href="/instructor" className="text-gray-300 hover:text-white transition-colors">Instructor</Link>
           <Link href="/learner" className="text-gray-300 hover:text-white transition-colors">Learner</Link>
         </nav>
-        <Button className="bg-purple-600 hover:bg-purple-700 text-white" onClick={() => toast.info("Authentication under construction")}>
-          Sign in
-        </Button>
+        <div className="flex items-center space-x-4">
+          <Button
+            className="bg-gradient-to-r from-purple-500 to-purple-700 hover:from-purple-600 hover:to-purple-800 text-white" asChild
+          >
+            <Link href="/login">Log In</Link>
+          </Button>
+          <Button variant={"outline"} className="" asChild>
+          <Link href="/register">Sign Up</Link>
+          </Button>
+        </div>
       </div>
     </header>
   );
