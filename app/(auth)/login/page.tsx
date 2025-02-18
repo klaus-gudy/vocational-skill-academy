@@ -1,6 +1,5 @@
 import LoginForm from "@/components/auth/login-form"
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card"
-import { GraduationCap } from "lucide-react"
 
 export default function LoginPage() {
   return (
