@@ -9,21 +9,7 @@ import {
 import { Clock, Users } from "lucide-react";
 import placeholder from "@/public/placeholder.png";
 
-interface CourseCardProps {
-  course: {
-    id: number;
-    title: string;
-    category: string;
-    instructor: string;
-    duration: number;
-    enrolled: number;
-    ratings: number;
-    price: number;
-    image: string;
-  };
-}
-
-export default function CourseCard({ course }: CourseCardProps) {
+export default function CourseCard({ course }: { course: Courses}) {
   return (
     <Card className="bg-[#272c4d] transition-all duration-300">
       <CardHeader className="p-0">

@@ -1,49 +1,13 @@
 "use client"
 
-import { useState } from "react"
+import { useCallback, useEffect, useState } from "react"
 import { Input } from "@/components/ui/input"
 import CourseCard from "./course-card"
-
-// Sample course data
-const courses = [
-  {
-    id: 1,
-    title: "Web Development Fundamentals",
-    instructor: "John Doe",
-    duration: 8,
-    enrolled: 156,
-    ratings: 4.5,
-    price: 50000,
-    category: "coding",
-    image: "/placeholder.svg",
-  },
-  {
-    id: 2,
-    title: "Modern Tailoring Techniques",
-    instructor: "Sarah Smith",
-    duration: 6,
-    enrolled: 89,
-    ratings: 4.2,
-    price: 35000,
-    category: "tailoring",
-    image: "/placeholder.svg",
-  },
-  {
-    id: 3,
-    title: "Sustainable Agriculture Practices",
-    instructor: "Michael Johnson",
-    duration: 10,
-    enrolled: 234,
-    ratings: 4.8,
-    price: 45000,
-    category: "agriculture",
-    image: "/placeholder.svg",
-  },
-]
-
-// const categories = ["All Categories", "Coding", "Agriculture", "Tailoring"]
+import { useCourseService } from "@/services/course";
 
 export default function   CourseExplorer() {
+  const [courses, setCourses] = useState<Courses[]>([]);
+  const [error, setError] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState("")
   const [selectedCategory] = useState("All Categories")
   const [priceRange] = useState([0, 100000])
@@ -55,6 +19,16 @@ export default function   CourseExplorer() {
     const matchesPrice = course.price >= priceRange[0] && course.price <= priceRange[1]
     return matchesSearch && matchesCategory && matchesPrice
   })
+
+  const fetchCourses = useCallback(() => {
+    useCourseService.getCourseList()
+      .then((data) => setCourses(Array.isArray(data) ? data : [data]))
+      .catch((error) => setError(error instanceof Error ? error.message : 'An unknown error occurred'))
+  }, []);
+
+  useEffect(() => {
+    fetchCourses();
+  }, [fetchCourses]);
 
   return (
     <div className="min-h-screen bg-[#e2def4]">
