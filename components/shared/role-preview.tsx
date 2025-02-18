@@ -1,20 +1,24 @@
 import { GraduationCap, PencilIcon, BookOpenIcon } from "lucide-react"
+import Link from "next/link";
 
 const features = [
   {
     icon: GraduationCap,
     title: "Learner",
     description: "Learn practical skills from local experts and start earning",
+    href: "/courses",
   },
   {
     icon: PencilIcon,
     title: "Instructor",
     description: "Teach what you love, share your expertise and get paid",
+    href: "#",
   },
   {
     icon: BookOpenIcon,
     title: "Admin manager",
     description: "Manage your platform, users, and courses with ease",
+    href: "#",
   },
 ]
 
@@ -31,6 +35,7 @@ export default function RolePreview() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {features.map((feature, index) => (
+            <Link href={feature.href}>
             <div
               key={index}
               className="hover-card p-6 rounded-lg bg-[#12152b] border border-gray-800 hover:border-purple-500/50 transition-all duration-300 group"
@@ -43,6 +48,7 @@ export default function RolePreview() {
               </h3>
               <p className="text-gray-400">{feature.description}</p>
             </div>
+            </Link>
           ))}
         </div>
       </div>

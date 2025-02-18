@@ -9,6 +9,7 @@ import {
 } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import placeholder from "@/public/placeholder.png";
+import { toast } from "sonner";
 
 export interface Course {
   id: number;
@@ -67,10 +68,10 @@ export default function InstructorCourseCard({
           {course.price} TZS
         </span>
         <div className="flex gap-2">
-          <Button size="sm" variant="outline">
+          <Button size="sm" variant="outline" onClick={() => toast.info("No editing functionality yet")}>
             <Edit2 className="w-4 h-4" />
           </Button>
-          <Button size="sm" variant="destructive">
+          <Button size="sm" variant="destructive" onClick={() => toast.info("No deleting functionality yet")}>
             <Trash2 className="w-4 h-4" />
           </Button>
         </div>

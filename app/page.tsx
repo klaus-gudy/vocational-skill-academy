@@ -2,6 +2,7 @@ import Header from "@/components/shared/header";
 import HeroPreview from "@/components/shared/hero-preview";
 import RolePreview from "@/components/shared/role-preview";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -22,11 +23,13 @@ export default function Home() {
               through affordable, high-quality online courses.
             </p>
             <div className="flex flex-wrap gap-4">
+              <Link href="/courses">
               <Button
                 className="bg-gradient-to-r from-purple-500 to-purple-700 hover:from-purple-600 hover:to-purple-800 text-white"
               >
                 Start Learning
               </Button>
+              </Link>
               <Button variant={"outline"} className="">
                 Become an Instructor
               </Button>

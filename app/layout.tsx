@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { montserrat } from "./fonts/fonts";
 import "./globals.css";
+import { Toaster } from "@/components/ui/sonner"
 
 export const metadata: Metadata = {
   title: "Vocational Skills Academy",
@@ -16,6 +17,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <body className={`${montserrat.className}`}>
       {children}
+      <Toaster />
       </body>
     </html>
   );
