@@ -52,11 +52,11 @@ create a ```.env.local``` and add a backend URL
 npm run dev
 ```
 > [!TIP]
-> WHy the hustle while you can view on live environment 
+> Why the hustle while you can view on live environment 
 
 ## 🚀 Live Demo
 
-**Front-End:** [Vocational Skill Academy](https://vocational-skill-academy-1lesy2lgx-klaus-gudys-projects.vercel.app/)
+**Front-End:** [Vocational Skill Academy](vocational-skill-academy-git-main-klaus-gudys-projects.vercel.app/)
 
 **Project Link:** [https://github.com/klaus-gudy/vocational-skill-academy](https://github.com/klaus-gudy/vocational-skill-academy)
 
