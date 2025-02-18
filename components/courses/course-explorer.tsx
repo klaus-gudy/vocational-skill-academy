@@ -29,7 +29,11 @@ export default function   CourseExplorer() {
   useEffect(() => {
     fetchCourses();
   }, [fetchCourses]);
-
+  
+  if (error) {
+    return <div className="text-center mt-8">{error}</div>
+  }
+  
   return (
     <div className="min-h-screen bg-[#e2def4]">
       <div className="bg-gradient-to-br from-[#0f1116] via-[#151934] to-[#1a1245] mb-8 px-4 py-8">
